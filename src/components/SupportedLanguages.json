@@ -1,0 +1,97 @@
+[
+  {
+    "language": "brainfuck",
+    "version": "2.7.3",
+    "aliases": ["bf"],
+    "Boilerplate": "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+  },
+  {
+    "language": "typescript",
+    "version": "1.32.3",
+    "aliases": ["deno", "deno-ts"],
+    "runtime": "deno",
+    "Boilerplate": "console.log('Hello, World!');"
+  },
+  {
+    "language": "c",
+    "version": "10.2.0",
+    "aliases": ["gcc"],
+    "runtime": "gcc",
+    "Boilerplate": "#include <stdio.h>\n\nint main() {\n  printf(\"Hello, World!\\n\");\n  return 0;\n}"
+  },
+  {
+    "language": "cpp",
+    "version": "10.2.0",
+    "aliases": ["cpp", "g++"],
+    "runtime": "gcc",
+    "Boilerplate": "#include <iostream>\n\nint main() {\n  std::cout << \"Hello, World!\" << std::endl;\n  return 0;\n}"
+  },
+  {
+    "language": "go",
+    "version": "1.16.2",
+    "aliases": ["go", "golang"],
+    "Boilerplate": "package main\n\nimport \"fmt\"\n\nfunc main() {\n  fmt.Println(\"Hello, World!\")\n}"
+  },
+  {
+    "language": "haskell",
+    "version": "9.0.1",
+    "aliases": ["haskell", "hs"],
+    "Boilerplate": "main :: IO ()\nmain = putStrLn \"Hello, World!\""
+  },
+  {
+    "language": "java",
+    "version": "15.0.2",
+    "aliases": [],
+    "Boilerplate": "public class HelloWorld {\n\n  public static void main(String[] args) {\n    System.out.println(\"Hello, World!\");\n  }\n}"
+  },
+  {
+    "language": "julia",
+    "version": "1.8.5",
+    "aliases": ["jl"],
+    "Boilerplate": "println(\"Hello, World!\")"
+  },
+  {
+    "language": "kotlin",
+    "version": "1.8.20",
+    "aliases": ["kt"],
+    "Boilerplate": "fun main() {\n  println(\"Hello, World!\")\n}"
+  },
+  {
+    "language": "csharp",
+    "version": "6.12.0",
+    "aliases": ["mono", "mono-csharp", "mono-c#", "mono-cs", "c#", "cs"],
+    "runtime": "mono",
+    "Boilerplate": "using System;\n\npublic class HelloWorld\n{\n  public static void Main(string[] args)\n  {\n    Console.WriteLine(\"Hello, World!\");\n  }\n}"
+  },
+  {
+    "language": "javascript",
+    "version": "18.15.0",
+    "aliases": ["node-javascript", "node-js", "javascript", "js"],
+    "runtime": "node",
+    "Boilerplate": "// Node.js\nconsole.log('Hello, World!');"
+  },
+  {
+    "language": "ocaml",
+    "version": "4.12.0",
+    "aliases": ["ocaml", "ml"],
+    "Boilerplate": "let () = print_endline \"Hello, World!\";;"
+  },
+  {
+    "language": "python",
+    "version": "3.10.0",
+    "aliases": ["py", "py3", "python3", "python3.10"],
+    "Boilerplate": "print(\"Hello, World!\")"
+  },
+  {
+    "language": "ruby",
+    "version": "3.0.1",
+    "aliases": ["ruby3", "rb"],
+    "Boilerplate": "puts \"Hello, world!\""
+  },
+  {
+    "language": "rust",
+    "version": "1.68.2",
+    "aliases": ["rs"],
+    "Boilerplate": "fn main() { println!(\"Hello, world!\"); }"
+  }
+]
