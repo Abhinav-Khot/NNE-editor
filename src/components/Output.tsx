@@ -8,9 +8,7 @@ interface Props {
 }
 
 const Output = ({ editorReference, lang }: Props) => {
-  const textArearef = useRef(
-    null
-  ) as React.MutableRefObject<null | HTMLInputElement>;
+  const textArearef = useRef(null);
 
   const [output, setOutput] = useState(null);
   async function runCode() {
