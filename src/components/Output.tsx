@@ -9,14 +9,16 @@ interface Props {
 
 const Output = ({ editorReference, lang }: Props) => {
   const textArearef = useRef(null);
-
+  const [load, setLoading] = useState("");
   const [output, setOutput] = useState(null);
   async function runCode() {
     const code = editorReference.current.getValue();
     if (!code) return;
     try {
+      setLoading("yes");
       const ans = await RunCode(lang, code, textArearef.current);
       const finans = ans.run.output;
+      setLoading("");
       setOutput(finans);
     } catch (error) {}
   }
@@ -31,9 +33,21 @@ const Output = ({ editorReference, lang }: Props) => {
         >
           Submit Code:
         </Text>
-        <Button colorScheme="teal" variant="solid" mb={3} onClick={runCode}>
-          Run
-        </Button>
+        {load ? (
+          <Button
+            colorScheme="teal"
+            variant="solid"
+            mb={3}
+            onClick={runCode}
+            isLoading
+          >
+            Run
+          </Button>
+        ) : (
+          <Button colorScheme="teal" variant="solid" mb={3} onClick={runCode}>
+            Run
+          </Button>
+        )}
       </Box>
       <Box p={2}>
         <Text
