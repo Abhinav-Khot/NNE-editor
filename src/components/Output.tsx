@@ -25,7 +25,7 @@ const Output = ({ editorReference, lang }: Props) => {
 
   return (
     <>
-      <Box ml={1}>
+      <Box ml={2}>
         <Text
           mb={3}
           decoration={"solid underline teal"}

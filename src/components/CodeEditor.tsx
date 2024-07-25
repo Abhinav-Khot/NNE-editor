@@ -3,7 +3,8 @@ import { useRef, useState } from "react";
 import Selector from "./Selector";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import Output from "./Output";
-import Header from "./Header";
+import { DragHandleIcon } from "@chakra-ui/icons";
+import { Center } from "@chakra-ui/react";
 
 const CodeEditor = () => {
   const editorReference = useRef(
@@ -21,7 +22,6 @@ const CodeEditor = () => {
 
   return (
     <>
-      <Header />
       <PanelGroup direction="horizontal">
         <Panel defaultSize={70}>
           <Selector
@@ -38,7 +38,17 @@ const CodeEditor = () => {
             onMount={focusEditor}
           />
         </Panel>
-        <PanelResizeHandle />
+        <PanelResizeHandle
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: 6,
+          }}
+        >
+          <DragHandleIcon />
+        </PanelResizeHandle>
         <Panel>
           <Output editorReference={editorReference} lang={CurrentLanguage} />
         </Panel>
