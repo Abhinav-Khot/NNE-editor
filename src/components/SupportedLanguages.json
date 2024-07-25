@@ -1,18 +1,5 @@
 [
   {
-    "language": "brainfuck",
-    "version": "2.7.3",
-    "aliases": ["bf"],
-    "Boilerplate": "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
-  },
-  {
-    "language": "typescript",
-    "version": "1.32.3",
-    "aliases": ["deno", "deno-ts"],
-    "runtime": "deno",
-    "Boilerplate": "console.log('Hello, World!');"
-  },
-  {
     "language": "c",
     "version": "10.2.0",
     "aliases": ["gcc"],
@@ -25,6 +12,19 @@
     "aliases": ["cpp", "g++"],
     "runtime": "gcc",
     "Boilerplate": "#include <iostream>\n\nint main() {\n  std::cout << \"Hello, World!\" << std::endl;\n  return 0;\n}"
+  },
+  {
+    "language": "brainfuck",
+    "version": "2.7.3",
+    "aliases": ["bf"],
+    "Boilerplate": "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+  },
+  {
+    "language": "typescript",
+    "version": "1.32.3",
+    "aliases": ["deno", "deno-ts"],
+    "runtime": "deno",
+    "Boilerplate": "console.log('Hello, World!');"
   },
   {
     "language": "go",

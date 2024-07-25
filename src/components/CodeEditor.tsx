@@ -9,9 +9,9 @@ const CodeEditor = () => {
   const editorReference = useRef(
     null
   ) as React.MutableRefObject<null | HTMLInputElement>;
-  const [CurrentLanguage, ChangeLanguage] = useState("brainfuck");
+  const [CurrentLanguage, ChangeLanguage] = useState("c");
   const [currentBoilerPlate, changeBoilerPlate] = useState(
-    "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+    '#include <stdio.h>\n\nint main() {\n  printf("Hello, World!\\n");\n  return 0;\n}'
   );
 
   const focusEditor = (editor: any) => {
