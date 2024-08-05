@@ -11,7 +11,7 @@ const CodeEditor = () => {
   ) as React.MutableRefObject<null | HTMLInputElement>;
   const [CurrentLanguage, ChangeLanguage] = useState("c");
   const [currentBoilerPlate, changeBoilerPlate] = useState(
-    '#include <stdio.h>\n\nint main() {\n  printf("Hello, World!!\\n");\n  return 0 ;\n}'
+    '#include <stdio.h>\n\nint main() {\n  printf("Hello, World!\\n");\n  return 0 ;\n}'
   );
 
   const focusEditor = (editor: any) => {
