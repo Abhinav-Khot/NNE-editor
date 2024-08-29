@@ -1,7 +1,7 @@
 import { Box, Textarea, Text, Button } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import RunCode from "./ApiCall";
-
+import { useHotkeys } from "react-hotkeys-hook";
 interface Props {
   editorReference: any;
   lang: string;
@@ -22,6 +22,7 @@ const Output = ({ editorReference, lang }: Props) => {
       setOutput(finans);
     } catch (error) {}
   }
+  useHotkeys("ctrl+enter", () => runCode());
 
   return (
     <>
