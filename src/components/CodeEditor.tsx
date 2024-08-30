@@ -4,6 +4,7 @@ import Selector from "./Selector";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import Output from "./Output";
 import { DragHandleIcon } from "@chakra-ui/icons";
+import { HotkeysProvider } from "react-hotkeys-hook";
 
 const CodeEditor = () => {
   const editorReference = useRef(

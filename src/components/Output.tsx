@@ -22,7 +22,8 @@ const Output = ({ editorReference, lang }: Props) => {
       setOutput(finans);
     } catch (error) {}
   }
-  useHotkeys("ctrl+enter", () => runCode());
+
+  useHotkeys("shift+enter", () => runCode(), { enableOnFormTags: true });
 
   return (
     <>
