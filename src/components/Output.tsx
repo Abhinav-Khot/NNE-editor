@@ -23,14 +23,9 @@ const Output = ({ editorReference, lang }: Props) => {
       setOutput(finans);
     } catch (error) {}
   }
-  async function test() {
-    const Data : any = await fetchLatestProblem();
-    setSTDIN(Data.tests[0].input);
-  }
+
   useHotkeys("shift+enter", () => runCode(), { enableOnFormTags: true });
-  useHotkeys("alt+enter", () => test(), { enableOnFormTags: true });
-
-
+  
   return (
     <>
       <Box ml={2}>
