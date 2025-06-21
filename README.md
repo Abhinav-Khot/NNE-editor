@@ -24,12 +24,10 @@
 
 ##  Getting Started
 
+
 ###  Prerequisites
 
-Before getting started with NNE-editor, ensure your runtime environment meets the following requirements:
-
-- **Package Manager:** `npm`
-
+Before getting started with NNE-editor, ensure you have `npm` installed.
 
 ###  Installation
 
