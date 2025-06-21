@@ -35,8 +35,12 @@ const Selector = ({ language, changeLang, changeBoilerPlate }: Props) => {
               key={obj.language}
               onClick={() => {
                 changeLang(obj.language);
-                changeBoilerPlate(obj.Boilerplate);
+                const langCodeRaw = localStorage.getItem("codeMapping"); //check if user had written some code for this lang before 
+                const langCode = langCodeRaw ? JSON.parse(langCodeRaw) : {};
+                if (langCode[obj.language]) changeBoilerPlate(langCode[obj.language]);
+                else changeBoilerPlate(obj.Boilerplate);
               }}
+
             >
               {obj.language}
               &nbsp;

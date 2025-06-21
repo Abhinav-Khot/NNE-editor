@@ -1,14 +1,16 @@
 import { Box, Textarea, Text, Button } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import {useState } from "react";
 import RunCode from "./ApiCall";
 import { useHotkeys } from "react-hotkeys-hook";
+import fetchLatestProblem from "./testGet";
+
 interface Props {
   editorReference: any;
   lang: string;
 }
 
 const Output = ({ editorReference, lang }: Props) => {
-  const textArearef = useRef(null);
+  const [stdin, setSTDIN] = useState("");
   const [load, setLoading] = useState("");
   const [output, setOutput] = useState(null);
   async function runCode() {
@@ -16,14 +18,19 @@ const Output = ({ editorReference, lang }: Props) => {
     if (!code) return;
     try {
       setLoading("yes");
-      const ans = await RunCode(lang, code, textArearef.current);
+      const ans = await RunCode(lang, code, stdin);
       const finans = ans.run.output;
       setLoading("");
       setOutput(finans);
     } catch (error) {}
   }
-
+  async function test() {
+    const Data : any = await fetchLatestProblem();
+    setSTDIN(Data.tests[0].input);
+  }
   useHotkeys("shift+enter", () => runCode(), { enableOnFormTags: true });
+  useHotkeys("alt+enter", () => test(), { enableOnFormTags: true });
+
 
   return (
     <>
@@ -60,7 +67,8 @@ const Output = ({ editorReference, lang }: Props) => {
           STDIN
         </Text>
         <Textarea
-          ref={textArearef}
+          value={stdin}
+          onChange={(e) => {setSTDIN(e.target.value)}}
           placeholder="Standard Input, if any."
           resize={"none"}
           minHeight={"20vh"}

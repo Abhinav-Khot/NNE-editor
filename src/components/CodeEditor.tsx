@@ -1,18 +1,34 @@
 import { Editor } from "@monaco-editor/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Selector from "./Selector";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import Output from "./Output";
 import { DragHandleIcon } from "@chakra-ui/icons";
 
 const CodeEditor = () => {
-  const editorReference = useRef(
-    null
-  ) as React.MutableRefObject<null | HTMLInputElement>;
+  const editorReference = useRef(null) as React.MutableRefObject<null | HTMLInputElement>;
+
   const [CurrentLanguage, ChangeLanguage] = useState("c");
   const [currentBoilerPlate, changeBoilerPlate] = useState(
-    '#include <stdio.h>\n\nint main() {\n  printf("Hello, World!\\n");\n  return 0 ;\n}'
+    () =>
+    { //check if some C code had been previously written
+      const savedCodeMapping = JSON.parse(localStorage.getItem("codeMapping") || '{}');
+      if (savedCodeMapping["c"]) return savedCodeMapping["c"];
+      else return '#include <stdio.h>\n\nint main() {\n  printf("Hello, World!\\n");\n  return 0 ;\n}';
+    }
   );
+  
+  useEffect(() => {
+    if (CurrentLanguage) {
+      localStorage.setItem("editorLanguage", CurrentLanguage);
+    }
+  }, [CurrentLanguage]); 
+
+  useEffect(() => {
+    const savedCodeMapping = JSON.parse(localStorage.getItem("codeMapping") || '{}');
+    savedCodeMapping[CurrentLanguage] = currentBoilerPlate; 
+    localStorage.setItem("codeMapping", JSON.stringify(savedCodeMapping));
+  }, [currentBoilerPlate]);
 
   const focusEditor = (editor: any) => {
     editorReference.current = editor;
@@ -31,10 +47,10 @@ const CodeEditor = () => {
           <Editor
             value={currentBoilerPlate}
             theme="vs-dark"
-            height={"78vh"}
             language={CurrentLanguage}
             defaultValue="// some comment"
             onMount={focusEditor}
+            onChange={(value) => changeBoilerPlate(value || '')}
           />
         </Panel>
         <PanelResizeHandle
@@ -49,7 +65,7 @@ const CodeEditor = () => {
           <DragHandleIcon />
         </PanelResizeHandle>
         <Panel>
-          <Output editorReference={editorReference} lang={CurrentLanguage} />
+        <Output editorReference={editorReference} lang={CurrentLanguage} />
         </Panel>
       </PanelGroup>
     </>
