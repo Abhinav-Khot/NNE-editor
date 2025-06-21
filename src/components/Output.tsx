@@ -2,7 +2,6 @@ import { Box, Textarea, Text, Button } from "@chakra-ui/react";
 import {useState } from "react";
 import RunCode from "./ApiCall";
 import { useHotkeys } from "react-hotkeys-hook";
-import fetchLatestProblem from "./testGet";
 
 interface Props {
   editorReference: any;
