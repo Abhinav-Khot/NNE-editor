@@ -24,11 +24,12 @@ const CodeEditor = () => {
     }
   }, [CurrentLanguage]); 
 
-  useEffect(() => {
+  function saveCode(value : string)
+  {
     const savedCodeMapping = JSON.parse(localStorage.getItem("codeMapping") || '{}');
-    savedCodeMapping[CurrentLanguage] = currentBoilerPlate; 
+    savedCodeMapping[CurrentLanguage] = value; 
     localStorage.setItem("codeMapping", JSON.stringify(savedCodeMapping));
-  }, [currentBoilerPlate]);
+  }
 
   const focusEditor = (editor: any) => {
     editorReference.current = editor;
@@ -48,9 +49,9 @@ const CodeEditor = () => {
             value={currentBoilerPlate}
             theme="vs-dark"
             language={CurrentLanguage}
-            defaultValue="// some comment"
             onMount={focusEditor}
-            onChange={(value) => changeBoilerPlate(value || '')}
+            onChange={(value) => saveCode(value || "")}
+            height = "80vh"
           />
         </Panel>
         <PanelResizeHandle
@@ -65,7 +66,7 @@ const CodeEditor = () => {
           <DragHandleIcon />
         </PanelResizeHandle>
         <Panel>
-        <Output editorReference={editorReference} lang={CurrentLanguage} />
+          <Output editorReference={editorReference} lang={CurrentLanguage} />
         </Panel>
       </PanelGroup>
     </>
