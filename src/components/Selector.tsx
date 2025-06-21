@@ -40,7 +40,6 @@ const Selector = ({ language, changeLang, changeBoilerPlate }: Props) => {
                 if (langCode[obj.language]) changeBoilerPlate(langCode[obj.language]);
                 else changeBoilerPlate(obj.Boilerplate);
               }}
-
             >
               {obj.language}
               &nbsp;
