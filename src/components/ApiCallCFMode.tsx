@@ -4,11 +4,6 @@ import LangsJSON from "./SupportedLanguages.json";
 const API = axios.create({ baseURL: "https://emkc.org/api/v2/piston" });
 
 async function RunCodeMod(lang: any, code: any, stdin: any, TimeLimit : number, MemoryLimit : number) {
-  if (stdin === null) {
-    stdin = "";
-  } else {
-    stdin = String(stdin.value);
-  }
   console.log(stdin);
   const res: any = LangsJSON.find((obj) => obj.language == lang);
   const ver = res.version;
