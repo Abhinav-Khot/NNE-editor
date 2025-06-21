@@ -7,7 +7,7 @@
     ├── package-lock.json
     ├── package.json
     ├── public
-    │   └── vite.svg
+    │  
     ├── src
     │   ├── App.css
     │   ├── App.tsx
@@ -28,8 +28,7 @@
 
 Before getting started with NNE-editor, ensure your runtime environment meets the following requirements:
 
-- **Programming Language:** TypeScript
-- **Package Manager:** Npm
+- **Package Manager:** `npm`
 
 
 ###  Installation
