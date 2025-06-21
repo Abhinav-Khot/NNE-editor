@@ -2,6 +2,7 @@ import { Box, Textarea, Text, Button } from "@chakra-ui/react";
 import {useState } from "react";
 import RunCode from "./ApiCall";
 import { useHotkeys } from "react-hotkeys-hook";
+import { useRef } from "react";
 
 interface Props {
   editorReference: any;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 const Output = ({ editorReference, lang }: Props) => {
-  const [stdin, setSTDIN] = useState("");
+  const stdinRef = useRef(null);
   const [load, setLoading] = useState("");
   const [output, setOutput] = useState(null);
   async function runCode() {
@@ -17,7 +18,7 @@ const Output = ({ editorReference, lang }: Props) => {
     if (!code) return;
     try {
       setLoading("yes");
-      const ans = await RunCode(lang, code, stdin);
+      const ans = await RunCode(lang, code, stdinRef.current);
       const finans = ans.run.output;
       setLoading("");
       setOutput(finans);
@@ -61,8 +62,7 @@ const Output = ({ editorReference, lang }: Props) => {
           STDIN
         </Text>
         <Textarea
-          value={stdin}
-          onChange={(e) => {setSTDIN(e.target.value)}}
+          ref = {stdinRef}
           placeholder="Standard Input, if any."
           resize={"none"}
           minHeight={"20vh"}
