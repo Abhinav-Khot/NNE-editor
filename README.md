@@ -4,7 +4,7 @@
 
 ###  Prerequisites
 
-Before getting started with NNE-editor, ensure you have `npm` installed.
+Before getting started with NNE-editor, ensure you have `node` and `npm` installed.
 
 ###  Installation
 
@@ -44,7 +44,7 @@ Run NNE-editor using the following command:
 The `CP_Mode` is a mode to fetch test cases from popular programming platforms and evaluate them against your code.
 
 This is currently not deployed to the main website.
-You can still use it on the preview website(https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app/) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first.
+You can still use it on the [preview website](https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app?_vercel_share=jfelIqNVOkFqwPiaQ1As9sfH108AgRkS) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first.
 
 
 
