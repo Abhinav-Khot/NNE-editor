@@ -1,4 +1,3 @@
-
 ##  Getting Started
 
 
@@ -29,8 +28,6 @@ npm install
 ```
 
 
-
-
 ###  Usage
 Run NNE-editor using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
@@ -38,6 +35,11 @@ Run NNE-editor using the following command:
 ```sh
  npm run dev
 ```
+
+'''
+The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link](https://github.com/engineer-man/piston?tab=readme-ov-file) and thus the public deployment does not work as of this date. Thus to run this project, please host your own server instance and change the API URL accordingly to run this project. 
+'''
+
 
 ## CP_Mode
 
