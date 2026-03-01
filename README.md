@@ -44,7 +44,7 @@ The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link
 The `CP_Mode` is a mode to fetch test cases from popular programming platforms and evaluate them against your code.
 
 This is currently not deployed to the main website.
-You can still use it on the [preview website](https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app?_vercel_share=jfelIqNVOkFqwPiaQ1As9sfH108AgRkS) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first.
+You can still use it on the [preview website](https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app?_vercel_share=jfelIqNVOkFqwPiaQ1As9sfH108AgRkS) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first. (As of Feb 15, 2026 this is also affected by the Piston API being taken out of access to the public)
 
 
 
