@@ -2,7 +2,7 @@ import axios from "axios";
 import LangsJSON from "./SupportedLanguages.json";
 
 const API = axios.create({
-  baseURL: "https://nne-editor.vercel.app/",
+  baseURL: "api", //this is basically routing the request to the vercel serverless function which will handle adding the auth
 });
 
 async function RunCode(lang: any, code: any, stdin: any) {
