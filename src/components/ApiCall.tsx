@@ -12,7 +12,7 @@ async function RunCode(lang: any, code: any, stdin: any) {
   console.log(stdin);
   const res: any = LangsJSON.find((obj) => obj.language == lang);
   const ver = res.version;
-  const response = await API.post("/execute", {
+  const response = await API.post("/PistonCall", {
     language: lang,
     version: ver,
     files: [
