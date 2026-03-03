@@ -36,7 +36,7 @@ Run NNE-editor using the following command:
  npm run dev
 ```
 
-The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link](https://github.com/engineer-man/piston?tab=readme-ov-file) and thus the public deployment does not work as of this date. Thus to run this project, please host your own Piston server instance and change the API URL accordingly to run this project. 
+The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link](https://github.com/engineer-man/piston?tab=readme-ov-file) and thus running this project locally will not execute the code as expected. Courtesy of `Engineer-Man` (the developer of Piston) we have obtained a authorizaiton key and use this to run the public deployment.  
 
 
 ## CP_Mode
@@ -44,8 +44,7 @@ The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link
 The `CP_Mode` is a mode to fetch test cases from popular programming platforms and evaluate them against your code.
 
 This is currently not deployed to the main website.
-You can still use it on the [preview website](https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app?_vercel_share=jfelIqNVOkFqwPiaQ1As9sfH108AgRkS) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first. (As of Feb 15, 2026 this is also affected by the Piston API being taken out of access to the public)
-
+You can still use it on the [preview website](https://nne-editor-git-cpmode-abhinav-khots-projects.vercel.app?_vercel_share=jfelIqNVOkFqwPiaQ1As9sfH108AgRkS) but this requires you to run the `src/server/server.js` script present in the `CP_mode` branch locally first.
 
 
 A GIF of the working is provided below.
