@@ -2,7 +2,7 @@ import axios from "axios";
 import LangsJSON from "./SupportedLanguages.json";
 
 const API = axios.create({
-  baseURL: "http://nne-editor.vercel.app/api/PistonCall",
+  baseURL: "http://localhost:5173/",
 });
 
 async function RunCode(lang: any, code: any, stdin: any) {
@@ -14,7 +14,7 @@ async function RunCode(lang: any, code: any, stdin: any) {
   console.log(stdin);
   const res: any = LangsJSON.find((obj) => obj.language == lang);
   const ver = res.version;
-  const response = await API.post("/execute", {
+  const response = await API.post("/PistonCall", {
     language: lang,
     version: ver,
     files: [
