@@ -1,7 +1,7 @@
 import axios from "axios";
 import LangsJSON from "./SupportedLanguages.json";
 
-const API = axios.create({ baseURL: "https://emkc.org/api/v2/piston" });
+const API = axios.create({ baseURL: "api" });
 
 async function RunCode(lang: any, code: any, stdin: any) {
   if (stdin === null) {
