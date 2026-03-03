@@ -2,7 +2,7 @@ import axios from "axios";
 import LangsJSON from "./SupportedLanguages.json";
 
 const API = axios.create({
-  baseURL: "http://localhost:5173/",
+  baseURL: "https://nne-editor.vercel.app/",
 });
 
 async function RunCode(lang: any, code: any, stdin: any) {
