@@ -1,6 +1,5 @@
 ##  Getting Started
 
-
 ###  Prerequisites
 
 Before getting started with NNE-editor, ensure you have `node` and `npm` installed.
@@ -21,7 +20,7 @@ cd NNE-editor
 3. Install the project dependencies:
 
 
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 npm install
@@ -30,13 +29,13 @@ npm install
 
 ###  Usage
 Run NNE-editor using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
  npm run dev
 ```
 
-The Piston API is no longer accessible to the pubic as of Feb 15, 2026 [See Link](https://github.com/engineer-man/piston?tab=readme-ov-file) and thus running this project locally will not execute the code as expected. Courtesy of `Engineer-Man` (the developer of Piston) we have obtained a authorizaiton key and use this to run the public deployment.  
+The Piston API is no longer accessible to the pubic as of Feb 15, 2026 ([See Link](https://github.com/engineer-man/piston?tab=readme-ov-file)) and thus running this project locally will not execute the code as expected. **Courtesy of `Engineer-Man` (the developer of Piston) we have obtained an authorization key and use this to run the [public website](https://nne-editor.vercel.app) (and the preview website for CP_Mode).** 
 
 
 ## CP_Mode
@@ -72,3 +71,5 @@ node server.js
 ```sh
 npm run dev
 ```
+
+(Again, as stated before, since Feb 15 2026, running this locally wont execute code since an authorization key is required and we have not exposed our key on GitHub.)
